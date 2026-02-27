@@ -24,5 +24,10 @@ def predict(patient: dict):
         "high_risk": flag
     }
 
-# bash
+# start command 
+
+# in bash:
 # uvicorn app:app --host 0.0.0.0 --port 10000
+
+# in browser:
+# http://localhost:10000/docs
