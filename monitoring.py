@@ -149,23 +149,6 @@ def monitor_threshold(df):
 
     return False
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def run_monitoring():
 
     data = pd.read_csv("recent_labeled_data.csv")
@@ -175,8 +158,7 @@ def run_monitoring():
     cal_flag = monitor_calibration(data)
     thr_flag = monitor_threshold(data)
 
-    if perf_flag or cal_flag or thr_flag:
-        retrain_model()
+    return drift_flag, perf_flag, cal_flag, thr_flag
 
 
 if __name__ == "__main__":
