@@ -1,6 +1,6 @@
 import joblib
 import pandas as pd
-from feature_engineering import EngineerFeatures
+from modules.feature_engineering import EngineerFeatures
 from fastapi import FastAPI
 
 package = joblib.load("readmission_production.joblib")
